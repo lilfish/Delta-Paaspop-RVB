@@ -140,31 +140,30 @@ html body {
 }
 
 .buttonRed {
-    background-color: rgb(207, 58, 39);
-    -moz-border-radius: 35px;
-    -webkit-border-radius: 35px;
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 40px;
-    padding: 15px 40px;
-    margin-top: 10%;
-    font-style: inherit;
-    font-size: 100%;
-    border: 0;
+  background-color: rgb(207, 58, 39);
+  -moz-border-radius: 35px;
+  -webkit-border-radius: 35px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 40px;
+  padding: 50px 100px;
+  margin-top: 10%;
+  font-style: inherit;
+  border: 0;
+
 }
 
 .buttonBlue {
-    background-color: rgb(44, 115, 209);
-    -moz-border-radius: 35px;
-    -webkit-border-radius: 35px;
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 40px;
-    padding: 15px 40px;
-    margin-top: 10%;
-    font-style: inherit;
-    font-size: 100%;
-    border: 0;
+  background-color: rgb(44, 115, 209);
+  -moz-border-radius: 35px;
+  -webkit-border-radius: 35px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 40px;
+  padding: 50px 100px;
+  margin-top: 10%;
+  font-style: inherit;
+  border: 0;
 }
 
 .buttonRed:active {

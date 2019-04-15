@@ -16,7 +16,8 @@ html
     br
     div.container
       div.row
-        div(class="col-6 center")
-          input.buttonRed(type="button" id="red" value=rood_antwoord)
-        div(class="col-6 center")
-          input.buttonBlue(type="submit" id="blue" value=blauw_antwoord)
+        form(action="/gestemd" method="POST")
+          div(class="col-6 center")
+            input.buttonRed(type="submit" name="rood" value=rood_antwoord)
+          div(class="col-6 center")
+            input.buttonBlue(type="submit" name="blauw" value=blauw_antwoord)

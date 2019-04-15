@@ -133,7 +133,22 @@ app.get("/stemmen", function (req, res) {
     });
 });
 
+//dit is de functie om op web te stemmen op rood of blauw
+app.post("/gestemd", function (req, res) {
+  if(req.body.rood){
+    db.update("teamrood", n => n + 1).write();
+    console.log ("gestemd op rood");
+    res.render("gestemd");
+  } else if(req.body.blauw){
+    db.update("teamblauw", n => n + 1).write();
+    console.log ("gestemd op blauw");
+    res.render("gestemd");
+  } else {
+    console.log("received post request with bad data");
+    res.status(404).send("Error");
+  }
 
+});
 
 /* Gedeelte om de posts van de "arduino"(nu een raspberry pi) te ontvangen */
 //save punten van een post
