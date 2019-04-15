@@ -1,0 +1,68 @@
+html body{
+    margin: 0;
+    font-family: 'Baloo Chettan', cursive;
+    padding: 0;
+}
+#rood{
+    background-color: rgb(207, 58, 39);
+    position: absolute;
+    left: 0px;
+    -webkit-transition: width 2s; /* Safari */
+    transition: width 2s;
+    height: 100%;
+    bottom: 0;
+    font-size: 100px;
+    min-width: 15%!important;
+    max-width: 85%!important;
+}
+#blauw{
+    background-color: rgb(44, 115, 209);
+    position: absolute;
+    right: 0px;
+    -webkit-transition: width 2s; /* Safari */
+    transition: width 2s;
+    height: 100%;
+    bottom: 0;
+    font-size: 100px;
+    min-width: 15%!important;
+    max-width: 85%!important;
+}
+
+.container{
+    margin: 20px;
+}
+
+.kwestieOuter{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 20px;    
+    font-size: 120px;
+    z-index: 100;
+    
+}
+#kwestie{
+    /* border-bottom: solid 2px black; */
+    border-width: 2px;
+    /* width: 50%!important; */
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#roodantwoord, #blauwantwoord{
+    text-align: center;
+    z-index: 100;
+    top: 40%!important;
+    line-height: 75px;
+}
+#rood span, #blauw span{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+}

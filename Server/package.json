@@ -1,0 +1,19 @@
+{
+  "name": "paaspopserver",
+  "version": "1.0.0",
+  "description": "paaspop server voor team rood en team blauw",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "lowdb": "^1.0.0",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm start",
+    "start": "node server.js"
+  },
+  "author": "Vincent & Davey",
+  "license": "ISC"
+}

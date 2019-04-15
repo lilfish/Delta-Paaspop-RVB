@@ -1,0 +1,19 @@
+html
+  head
+    title Paaspop
+    link(rel='stylesheet', href='public/style.css')
+    script(src='public/countUp.js' type="module")
+    script(src='public/reloadinfo.js' type="module")
+    link(href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet")
+  body
+    div.kwestieOuter
+      div#kwestie=kwestie
+
+    div(style={width: roodprocent + '%'})#rood
+      span#roodantwoord=rood_antwoord
+      span#roodprocentspan=rood
+      
+    
+    div(style={width: blauwprocent + '%'})#blauw
+      span#blauwantwoord=blauw_antwoord
+      span#blauwprocentspan=blauw

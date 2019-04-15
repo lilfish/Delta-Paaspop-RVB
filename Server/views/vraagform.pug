@@ -1,0 +1,18 @@
+html
+  head
+    title Paaspop
+    link(rel='stylesheet', href='public/style.css')
+    link(href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet")
+  body
+    div.container
+        h1= "Voeg een nieuwe vraag toe"
+        form(action="/nieuwe_vraag" method="POST")
+            p Vraag:
+            input(type="text" name="vraag" placeholder="")
+            p Keuze rood:
+            input(type="text" name="rood_vraag" placeholder="")
+            p Keuze blauw:
+            input(type="text" name="blauw_vraag" placeholder="")
+            br
+            br
+            input(type="submit" value="opslaan")
