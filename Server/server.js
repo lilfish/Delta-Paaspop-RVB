@@ -155,41 +155,46 @@ app.post("/nieuwe_vraag", function (req, res) {
     var nieuwe_kwestie = req.body.vraag;
     var nieuwe_rood_antwoord = req.body.rood_vraag;
     var nieuwe_blauw_antwoord = req.body.blauw_vraag;
-    //get all results and questions
-    var teamrood_punten_old = db
-        .get("teamrood");
-    var teamblauw_punten_old = db
-        .get("teamblauw");
-    var kwestie_old = db_vragen
-        .get("vraag");
-    var rood_antwoord_old = db_vragen
-        .get("rood_antwoord");
-    var blauw_antwoord_old = db_vragen
-        .get("blauw_antwoord");
-    //safe results db_results
-    db_results.get('old_data').push({
-        kwestie: kwestie_old,
-        rood_antwoord: rood_antwoord_old,
-        blauw_antwoord: blauw_antwoord_old,
-        teamrood_punten: teamrood_punten_old,
-        teamblauw_punten: teamblauw_punten_old
-    }).write();
-    db_results.read();
-    console.log('State has been updated');
-    
-    db_vragen.set('vraag', nieuwe_kwestie)
-        .write()
-    db_vragen.set('rood_antwoord', nieuwe_rood_antwoord)
-        .write()
-    db_vragen.set('blauw_antwoord', nieuwe_blauw_antwoord)
-        .write()
+    var password = req.body.wachtwoord;
+    if (password == "rvbP@asp0p"){
+        //get all results and questions
+        var teamrood_punten_old = db
+            .get("teamrood");
+        var teamblauw_punten_old = db
+            .get("teamblauw");
+        var kwestie_old = db_vragen
+            .get("vraag");
+        var rood_antwoord_old = db_vragen
+            .get("rood_antwoord");
+        var blauw_antwoord_old = db_vragen
+            .get("blauw_antwoord");
+        //safe results db_results
+        db_results.get('old_data').push({
+            kwestie: kwestie_old,
+            rood_antwoord: rood_antwoord_old,
+            blauw_antwoord: blauw_antwoord_old,
+            teamrood_punten: teamrood_punten_old,
+            teamblauw_punten: teamblauw_punten_old
+        }).write();
+        db_results.read();
+        console.log('State has been updated');
+        
+        db_vragen.set('vraag', nieuwe_kwestie)
+            .write()
+        db_vragen.set('rood_antwoord', nieuwe_rood_antwoord)
+            .write()
+        db_vragen.set('blauw_antwoord', nieuwe_blauw_antwoord)
+            .write()
 
-    //update results to 0
-    db.set('teamrood', 0)
-        .write()
-    db.set('teamblauw', 0)
-        .write()
-    res.render("reload");
+        //update results to 0
+        db.set('teamrood', 0)
+            .write()
+        db.set('teamblauw', 0)
+            .write()
+        res.render("reload");
+    } else {
+        res.send("Wrong password");
+    }
 });
 
 /* Resultaten weergeven */
