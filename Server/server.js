@@ -199,7 +199,10 @@ app.post("/nieuwe_vraag", function (req, res) {
 
 /* Resultaten weergeven */
 app.get("/results", function (req, res) {
-    res.render("results");
+    var old_results = db_results.get('old_data').value();
+    res.render("results",{
+        old_results
+    });
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

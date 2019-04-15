@@ -202,6 +202,13 @@
       "blauw_antwoord": "Geert & Sirus",
       "teamrood_punten": 18,
       "teamblauw_punten": 29
+    },
+    {
+      "kwestie": "pindakaas",
+      "rood_antwoord": "pindakaas",
+      "blauw_antwoord": "pindakaas",
+      "teamrood_punten": 12,
+      "teamblauw_punten": 23
     }
   ]
 }

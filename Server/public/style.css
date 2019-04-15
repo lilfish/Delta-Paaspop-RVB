@@ -66,3 +66,38 @@ html body{
     transform: translate(-50%, -50%);
     font-size: 100px;
 }
+.result_Titel{
+    text-align: center;
+    padding: 20px;
+    font-size: 50px;
+}
+.smallHR{
+    /* width: 80%; */
+    
+    margin-bottom: 50px;
+    padding-top: 100px;
+    text-align: center;
+}
+@media only screen and (max-width: 33.75em) {  /* 540px */
+    .center_sm {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  }
+.crack1{
+    background-image: url('crack3.png');
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+    background-attachment: fixed;
+}
+
+.gray{
+    color: rgb(104, 104, 104);
+    line-height: 5px;
+
+}
