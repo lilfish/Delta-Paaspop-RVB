@@ -209,6 +209,20 @@
       "blauw_antwoord": "pindakaas",
       "teamrood_punten": 12,
       "teamblauw_punten": 23
+    },
+    {
+      "kwestie": "awd",
+      "rood_antwoord": "wad",
+      "blauw_antwoord": "awdwadawdwa",
+      "teamrood_punten": 0,
+      "teamblauw_punten": 0
+    },
+    {
+      "kwestie": "thomas",
+      "rood_antwoord": "pdo",
+      "blauw_antwoord": "",
+      "teamrood_punten": 0,
+      "teamblauw_punten": 0
     }
   ]
 }

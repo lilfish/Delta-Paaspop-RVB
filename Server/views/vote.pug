@@ -1,0 +1,22 @@
+html
+  head
+    title Paaspop
+
+    link(rel='stylesheet', href='public/style.css')
+    link(rel='stylesheet', href='public/simple-grid.css')
+    link(href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet")
+
+  body.crack2
+    br
+    br
+    br
+    h1.center ROOD of Blauw?
+    br
+    h3.center #{kwestie}
+    br
+    div.container
+      div.row
+        div(class="col-6 center")
+          input.buttonRed(type="button" id="red" value=rood_antwoord)
+        div(class="col-6 center")
+          input.buttonBlue(type="submit" id="blue" value=blauw_antwoord)

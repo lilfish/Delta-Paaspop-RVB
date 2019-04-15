@@ -37,10 +37,10 @@ html body{
     left: 0;
     right: 0;
     text-align: center;
-    top: 20px;    
+    top: 20px;
     font-size: 120px;
     z-index: 100;
-    
+
 }
 #kwestie{
     /* border-bottom: solid 2px black; */
@@ -73,7 +73,7 @@ html body{
 }
 .smallHR{
     /* width: 80%; */
-    
+
     margin-bottom: 50px;
     padding-top: 100px;
     text-align: center;
@@ -87,12 +87,34 @@ html body{
   }
 .crack1{
     background-image: url('crack3.png');
-    
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
-    
+
+
+    background-attachment: fixed;
+}
+
+.crack2{
+    background-image: url('crack2.png');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    background-attachment: fixed;
+}
+
+.crack3{
+    background-image: url('crack1.png');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
     background-attachment: fixed;
 }
 
@@ -100,4 +122,26 @@ html body{
     color: rgb(104, 104, 104);
     line-height: 5px;
 
+}
+
+.buttonRed{
+  background-color: rgb(207, 58, 39);
+  	-moz-border-radius:35px;
+  	-webkit-border-radius:35px;
+  	cursor:pointer;
+  	color:#ffffff;
+  	font-size:40px;
+  	padding:15px 40px;
+    margin-top: 10%;
+}
+
+.buttonBlue{
+  background-color: rgb(44, 115, 209);
+  	-moz-border-radius:35px;
+  	-webkit-border-radius:35px;
+  	cursor:pointer;
+  	color:#ffffff;
+  	font-size:40px;
+  	padding:15px 40px;
+    margin-top: 10%;
 }

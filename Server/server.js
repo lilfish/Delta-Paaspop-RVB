@@ -123,6 +123,18 @@ app.get("/rasp_kewstie", function(req, res){
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({ kwestie: vraag_kwestie.kwestie, rood_vraag: vraag_kwestie.rood_antwoord, blauw_vraag: vraag_kwestie.blauw_antwoord }));
 });
+
+app.get("/stemmen", function (req, res) {
+    var vraag_kwestie = getKwestieEnVragen();
+    res.render("vote",{
+         rood_antwoord: vraag_kwestie.rood_antwoord,
+         blauw_antwoord: vraag_kwestie.blauw_antwoord,
+         kwestie: vraag_kwestie.kwestie
+    });
+});
+
+
+
 /* Gedeelte om de posts van de "arduino"(nu een raspberry pi) te ontvangen */
 //save punten van een post
 app.post("/give_data", function (req, res) {
@@ -178,7 +190,7 @@ app.post("/nieuwe_vraag", function (req, res) {
         }).write();
         db_results.read();
         console.log('State has been updated');
-        
+
         db_vragen.set('vraag', nieuwe_kwestie)
             .write()
         db_vragen.set('rood_antwoord', nieuwe_rood_antwoord)
@@ -206,4 +218,3 @@ app.get("/results", function (req, res) {
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-
