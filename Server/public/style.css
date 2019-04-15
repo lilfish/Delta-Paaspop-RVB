@@ -1,38 +1,42 @@
-html body{
+html body {
     margin: 0;
     font-family: 'Baloo Chettan', cursive;
     padding: 0;
 }
-#rood{
+
+#rood {
     background-color: rgb(207, 58, 39);
     position: absolute;
     left: 0px;
-    -webkit-transition: width 2s; /* Safari */
+    -webkit-transition: width 2s;
+    /* Safari */
     transition: width 2s;
     height: 100%;
     bottom: 0;
     font-size: 100px;
-    min-width: 15%!important;
-    max-width: 85%!important;
+    min-width: 15% !important;
+    max-width: 85% !important;
 }
-#blauw{
+
+#blauw {
     background-color: rgb(44, 115, 209);
     position: absolute;
     right: 0px;
-    -webkit-transition: width 2s; /* Safari */
+    -webkit-transition: width 2s;
+    /* Safari */
     transition: width 2s;
     height: 100%;
     bottom: 0;
     font-size: 100px;
-    min-width: 15%!important;
-    max-width: 85%!important;
+    min-width: 15% !important;
+    max-width: 85% !important;
 }
 
-.container{
+.container {
     margin: 20px;
 }
 
-.kwestieOuter{
+.kwestieOuter {
     position: absolute;
     left: 0;
     right: 0;
@@ -42,7 +46,8 @@ html body{
     z-index: 100;
 
 }
-#kwestie{
+
+#kwestie {
     /* border-bottom: solid 2px black; */
     border-width: 2px;
     /* width: 50%!important; */
@@ -53,39 +58,49 @@ html body{
     text-align: center;
     background-color: rgba(255, 255, 255, 0.5);
 }
-#roodantwoord, #blauwantwoord{
+
+#roodantwoord,
+#blauwantwoord {
     text-align: center;
     z-index: 100;
-    top: 40%!important;
+    top: 40% !important;
     line-height: 75px;
 }
-#rood span, #blauw span{
+
+#rood span,
+#blauw span {
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 100px;
 }
-.result_Titel{
+
+.result_Titel {
     text-align: center;
     padding: 20px;
     font-size: 50px;
 }
-.smallHR{
+
+.smallHR {
     /* width: 80%; */
 
     margin-bottom: 50px;
     padding-top: 100px;
     text-align: center;
 }
-@media only screen and (max-width: 33.75em) {  /* 540px */
+
+@media only screen and (max-width: 33.75em) {
+
+    /* 540px */
     .center_sm {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-      }
-  }
-.crack1{
+    }
+}
+
+.crack1 {
     background-image: url('crack3.png');
 
     background-position: center;
@@ -96,7 +111,7 @@ html body{
     background-attachment: fixed;
 }
 
-.crack2{
+.crack2 {
     background-image: url('crack2.png');
 
     background-position: center;
@@ -107,7 +122,7 @@ html body{
     background-attachment: fixed;
 }
 
-.crack3{
+.crack3 {
     background-image: url('crack1.png');
 
     background-position: center;
@@ -118,30 +133,44 @@ html body{
     background-attachment: fixed;
 }
 
-.gray{
+.gray {
     color: rgb(104, 104, 104);
     line-height: 5px;
 
 }
 
-.buttonRed{
-  background-color: rgb(207, 58, 39);
-  	-moz-border-radius:35px;
-  	-webkit-border-radius:35px;
-  	cursor:pointer;
-  	color:#ffffff;
-  	font-size:40px;
-  	padding:15px 40px;
+.buttonRed {
+    background-color: rgb(207, 58, 39);
+    -moz-border-radius: 35px;
+    -webkit-border-radius: 35px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 40px;
+    padding: 15px 40px;
     margin-top: 10%;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0;
 }
 
-.buttonBlue{
-  background-color: rgb(44, 115, 209);
-  	-moz-border-radius:35px;
-  	-webkit-border-radius:35px;
-  	cursor:pointer;
-  	color:#ffffff;
-  	font-size:40px;
-  	padding:15px 40px;
+.buttonBlue {
+    background-color: rgb(44, 115, 209);
+    -moz-border-radius: 35px;
+    -webkit-border-radius: 35px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 40px;
+    padding: 15px 40px;
     margin-top: 10%;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0;
+}
+
+.buttonRed:active {
+    background-color: rgb(161, 44, 29);
+}
+
+.buttonBlue:active {
+    background-color: rgb(33, 84, 151);
 }

@@ -10,22 +10,22 @@ html
     
     link(href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet")
   body.crack1
-  div.result_Titel Resultaten van vorige kwesites:
-  hr
-  div.container
-  each val, index in old_results
-    div.row(id="chart_div"+index)
-      div.col-6.col-12-sm.center_sm.hidden_sm
-        canvas.chart(id="chart" + index)&attributes({'rood': val.teamrood_punten, 'blauw': val.teamblauw_punten})
-      div.col-6.col-12-sm.center_sm
-        h1=val.kwestie
-        br
-        p Keuze rood: #{val.rood_antwoord}
-        p Keuze blauw: #{val.blauw_antwoord}
-        br
-        br
-        p.gray Aantal punten rood: #{val.teamrood_punten}
-        p.gray Aantal punten blauw: #{val.teamblauw_punten}
-      div.col-8.smallHR
+    div.result_Titel Resultaten van vorige kwesites:
+    hr
+    div.container
+    each val, index in old_results
+      div.row(id="chart_div"+index)
+        div.col-6.col-12-sm.center_sm.hidden_sm
+          canvas.chart(id="chart" + index)&attributes({'rood': val.teamrood_punten, 'blauw': val.teamblauw_punten})
+        div.col-6.col-12-sm.center_sm
+          h1=val.kwestie
+          br
+          p Keuze rood: #{val.rood_antwoord}
+          p Keuze blauw: #{val.blauw_antwoord}
+          br
+          br
+          p.gray Aantal punten rood: #{val.teamrood_punten}
+          p.gray Aantal punten blauw: #{val.teamblauw_punten}
+        div.col-8.smallHR
       
 
