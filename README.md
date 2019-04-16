@@ -7,7 +7,7 @@ For more information about the project you can check out the wiki for the next p
 
 ### Server
 
-[Server documentation](server)
+[Server documentation](https://git.fhict.nl/I393504/paaspop-rvb/wikis/server)
 
 ### Raspberry pi
 
