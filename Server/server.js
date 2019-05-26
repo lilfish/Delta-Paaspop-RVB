@@ -5,6 +5,8 @@ const port = 3000;
 var bodyParser = require("body-parser");
 var path = require("path");
 
+module.exports = app;
+
 //save dingen
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
@@ -103,9 +105,9 @@ app.get("/updateVals", function (req, res) {
     });
 });
 
-function getKwestieEnVragen(){
+function getKwestieEnVragen() {
     var kwestie = db_vragen
-    .get("vraag").value();
+        .get("vraag").value();
     var rood_antwoord = db_vragen
         .get("rood_antwoord").value();
     var blauw_antwoord = db_vragen
@@ -117,36 +119,42 @@ function getKwestieEnVragen(){
     };
 }
 
-app.get("/rasp_kewstie", function(req, res){
+app.get("/rasp_kewstie", function (req, res) {
     var vraag_kwestie = getKwestieEnVragen();
 
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({ kwestie: vraag_kwestie.kwestie, rood_vraag: vraag_kwestie.rood_antwoord, blauw_vraag: vraag_kwestie.blauw_antwoord }));
+    res.send(JSON.stringify({
+        kwestie: vraag_kwestie.kwestie,
+        rood_vraag: vraag_kwestie.rood_antwoord,
+        blauw_vraag: vraag_kwestie.blauw_antwoord
+    }));
 });
 
 app.get("/stemmen", function (req, res) {
     var vraag_kwestie = getKwestieEnVragen();
-    res.render("vote",{
-         rood_antwoord: vraag_kwestie.rood_antwoord,
-         blauw_antwoord: vraag_kwestie.blauw_antwoord,
-         kwestie: vraag_kwestie.kwestie
+    res.render("vote", {
+        rood_antwoord: vraag_kwestie.rood_antwoord,
+        blauw_antwoord: vraag_kwestie.blauw_antwoord,
+        kwestie: vraag_kwestie.kwestie
     });
 });
 
 //dit is de functie om op web te stemmen op rood of blauw
 app.post("/gestemd", function (req, res) {
-  if(req.body.rood){
-    db.update("teamrood", n => n + 1).write();
-    console.log ("gestemd op rood");
-    res.render("gestemd");
-  } else if(req.body.blauw){
-    db.update("teamblauw", n => n + 1).write();
-    console.log ("gestemd op blauw");
-    res.render("gestemd");
-  } else {
-    console.log("received post request with bad data");
-    res.status(404).send("Error");
-  }
+    if (req.body.rood) {
+        db.update("teamrood", n => n + 1).write();
+        console.log("gestemd op rood");
+        res.render("gestemd");
+    } else if (req.body.blauw) {
+        db.update("teamblauw", n => n + 1).write();
+        console.log("gestemd op blauw");
+        res.render("gestemd");
+    } else {
+        console.log("received post request with bad data");
+        console.log(JSON.stringify(req.body));
+        console.log(JSON.stringify(req.header));
+        res.status(404).send("Error");
+    }
 
 });
 
@@ -183,7 +191,7 @@ app.post("/nieuwe_vraag", function (req, res) {
     var nieuwe_rood_antwoord = req.body.rood_vraag;
     var nieuwe_blauw_antwoord = req.body.blauw_vraag;
     var password = req.body.wachtwoord;
-    if (password == "rvbP@asp0p"){
+    if (password == "rvbP@asp0p") {
         //get all results and questions
         var teamrood_punten_old = db
             .get("teamrood");
@@ -220,6 +228,7 @@ app.post("/nieuwe_vraag", function (req, res) {
             .write()
         res.render("reload");
     } else {
+        res.status(404)
         res.send("Wrong password");
     }
 });
@@ -227,7 +236,7 @@ app.post("/nieuwe_vraag", function (req, res) {
 /* Resultaten weergeven */
 app.get("/results", function (req, res) {
     var old_results = db_results.get('old_data').value();
-    res.render("results",{
+    res.render("results", {
         old_results
     });
 });
