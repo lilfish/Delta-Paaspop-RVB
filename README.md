@@ -7,17 +7,17 @@ For more information about the project you can check out the wiki for the next p
 
 ### Server
 
-[Server documentation](https://git.fhict.nl/I393504/paaspop-rvb/wikis/server)
+[Server documentation](server)
 
 ### Raspberry pi
 
-[Raspberry pi documentation](https://git.fhict.nl/I393504/paaspop-rvb/wikis/Raspberry-Pi)
+[Raspberry pi documentation](Raspberry-Pi)
 
 Even though the Arduino code is not going to be used in this project anymore we still added the code and documentation for this part. It can be found here:
 
 ### Arduino
 
-[Arduino documentation](https://git.fhict.nl/I393504/paaspop-rvb/wikis/Arduino)
+[Arduino documentation](Arduino)
 
 ### Unittest
-[Unittest documentation](https://git.fhict.nl/I393504/paaspop-rvb/wikis/Unittest)
+[Unittest documentation](Unittest)
