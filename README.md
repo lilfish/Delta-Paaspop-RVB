@@ -7,17 +7,17 @@ For more information about the project you can check out the wiki for the next p
 
 ### Server
 
-[Server documentation](server)
+[Server documentation](https://github.com/lilfish/Delta-Paaspop-RVB/wiki/server)
 
 ### Raspberry pi
 
-[Raspberry pi documentation](Raspberry-Pi)
+[Raspberry pi documentation](https://github.com/lilfish/Delta-Paaspop-RVB/wiki/Raspberry-Pi)
 
 Even though the Arduino code is not going to be used in this project anymore we still added the code and documentation for this part. It can be found here:
 
 ### Arduino
 
-[Arduino documentation](Arduino)
+[Arduino documentation](https://github.com/lilfish/Delta-Paaspop-RVB/wiki/Arduino)
 
 ### Unittest
-[Unittest documentation](Unittest)
+[Unittest documentation](https://github.com/lilfish/Delta-Paaspop-RVB/wiki/Unittest)
